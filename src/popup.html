@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks to Words Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            min-width: 200px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Custom file input styles */
+        .file-input-wrapper {
+            position: relative;
+            width: 100%;
+            /* Full width */
+        }
+
+        input[type="file"] {
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+        }
+
+        .custom-file-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d8d8d8;
+            /* Background color */
+            color: #000000;
+            /* Text color */
+            padding: 15px;
+            /* Increased height */
+            border-radius: 4px;
+            border: 2px dashed #9c9c9c;
+            /* Dotted border */
+            cursor: pointer;
+            text-align: center;
+            height: 60px;
+            /* Fixed height */
+            transition: background-color 0.3s;
+        }
+
+        .custom-file-input:hover {
+            background-color: #e8e8e8;
+            /* Lighter on hover */
+        }
+
+        .upload-icon {
+            margin-right: 5px;
+            /* Space between icon and text */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #1e1e1e;
+            /* Dark button background */
+            color: #ffffff;
+            /* Light button text */
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3c3c3c;
+            /* Lighter on hover */
+        }
+
+        footer {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h4>Fill Marks from Excel</h4>
+    </header>
+    <main>
+
+        <div class="file-input-wrapper">
+            <label class="custom-file-input" id="fileLabel">
+                <i class="fas fa-upload upload-icon"></i> Choose Excel File
+                <input type="file" id="fileInput" accept=".xlsx" />
+            </label>
+        </div>
+        <button disabled id="fillFromExcelButton">Fill Marks</button>
+    </main>
+    <footer>Dept. of CSE</footer>
+    <script src="script.js"></script>
+    <script src="/dist/bundle.js" type="text/javascript"></script>
+</body>
+
+</html>
